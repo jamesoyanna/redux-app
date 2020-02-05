@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 
  class PostForm extends Component {
+constructor(props){
+    super(props)
+    this.state = {
+        title: '',
+        body: ''
+    }
+}
+
     render() {
         return (
             <div>
@@ -9,13 +17,13 @@ import React, { Component } from 'react';
                     <div>
                         <label>Title:</label>
                         <br />
-                        <input type="text" name="title"></input>
+                        <input type="text" name="title" value={this.state.title}></input>
                     </div>
                     <br />
                     <div>
                         <label>Body:</label>
                         <br />
-                        <textarea name="body"></textarea>
+                        <textarea name="body" value={this.state.body}></textarea>
                     </div>
                     <br />
                 </form>
